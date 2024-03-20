@@ -3,7 +3,7 @@
 .settings
 [Rr]elease
 [Dd]ebug
-.launch
+*.launch
 
 # Rand
 .zip
