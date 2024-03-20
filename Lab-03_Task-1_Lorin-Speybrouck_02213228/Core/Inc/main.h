@@ -60,8 +60,8 @@ void Error_Handler(void);
 #define Blue_BTN_Pin GPIO_PIN_13
 #define Blue_BTN_GPIO_Port GPIOC
 #define Blue_BTN_EXTI_IRQn EXTI15_10_IRQn
-#define LD1_Pin GPIO_PIN_5
-#define LD1_GPIO_Port GPIOA
+#define LD2_Pin GPIO_PIN_14
+#define LD2_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

@@ -222,7 +222,7 @@ void EXTI15_10_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(Blue_BTN_Pin);
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
   if(HAL_GPIO_ReadPin(GPIOC, Blue_BTN_Pin) == 0) {
-	  HAL_GPIO_TogglePin(GPIOA, LD1_Pin);
+	  HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
   }
   /* USER CODE END EXTI15_10_IRQn 1 */
 }
