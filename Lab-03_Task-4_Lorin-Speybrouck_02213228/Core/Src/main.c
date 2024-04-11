@@ -63,6 +63,7 @@ static void MX_GPIO_Init(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -94,11 +95,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_GPIO_TogglePin(GPIOA, RED_LED_Pin);
-	  HAL_GPIO_TogglePin(GPIOB, GREEN_LED_Pin);
-	  HAL_GPIO_TogglePin(GPIOB, BLUE_LED_Pin);
-	  HAL_GPIO_TogglePin(GPIOA, YELLOW_LED_Pin);
-	  HAL_Delay(delay);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

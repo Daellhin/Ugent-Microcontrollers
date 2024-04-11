@@ -292,6 +292,7 @@ void LCD_Pos (unsigned char pos)
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -323,14 +324,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  I2Cstart();
-	  I2Cwritebyte(0x27<<1);
-	  LCD_Init();
-	  LCD_Clear();
 
-	  LCD_String("Lorin Speybrouck");
-
-	  I2Cstop();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

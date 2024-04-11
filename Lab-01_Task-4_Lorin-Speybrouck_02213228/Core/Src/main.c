@@ -63,6 +63,7 @@ static void MX_GPIO_Init(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -93,19 +94,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  // Check Blue button (PC13) and enable LD1 (PB5)
-	  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1) {
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-	  } else {
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-	  }
+    /* USER CODE END WHILE */
 
-	  // Check K1 button (PB2) and enable red LED (PA3)
-	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_2) == 1) {
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
-	  } else {
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
-	  }
+    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
