@@ -181,4 +181,5 @@
 			<resource resourceType="PROJECT" workspacePath="/Lab-06_Task-2_Lorin-Speybrouck_02213228"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
