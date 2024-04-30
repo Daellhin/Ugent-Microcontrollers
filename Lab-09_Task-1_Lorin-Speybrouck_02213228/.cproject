@@ -165,15 +165,6 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.1901333624;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.1901333624.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1362161057;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1041768881">
-			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1370747466;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1370747466.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1360517557;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.38555060">
-			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-	</storageModule>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Debug">
 			<resource resourceType="PROJECT" workspacePath="/Lab-09_Task-1_Lorin-Speybrouck_02213228"/>
@@ -182,4 +173,5 @@
 			<resource resourceType="PROJECT" workspacePath="/Lab-09_Task-1_Lorin-Speybrouck_02213228"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="scannerConfiguration"/>
 </cproject>
