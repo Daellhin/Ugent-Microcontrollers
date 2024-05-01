@@ -339,7 +339,7 @@ int main(void) {
 		LCD_String(states[state]);
 		LCD_Pos(40);
 		char LCDText[50] = "";
-		sprintf(LCDText, "%f.2", value);
+		sprintf(LCDText, "%.4f", value);
 		LCD_String(LCDText);
 		I2Cstop();
 
