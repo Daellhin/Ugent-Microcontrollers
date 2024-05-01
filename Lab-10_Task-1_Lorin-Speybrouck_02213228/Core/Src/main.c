@@ -121,7 +121,7 @@ int main(void) {
 			dataRdyIntReceived = 0;
 			LSM6DSL_Axes_t acc_axes;
 			LSM6DSL_ACC_GetAxes(&MotionSensor, &acc_axes);
-			//printf("% 5d, % 5d, % 5d\r\n", (int) acc_axes.x, (int) acc_axes.y,	(int) acc_axes.z);
+			printf("% 5d, % 5d, % 5d\r\n", (int) acc_axes.x, (int) acc_axes.y,	(int) acc_axes.z);
 
 			/* Normalize data to [-1; 1] and accumulate into input buffer */
 			/* Note: window overlapping can be managed here */
@@ -130,7 +130,7 @@ int main(void) {
 			aiInData[write_index + 2] = (float) acc_axes.z / 4000.0f;
 			write_index += 3;
 
-			if (write_index == AI_NETWORK_IN_	1_SIZE) {
+			if (write_index == AI_NETWORK_IN_1_SIZE) {
 				write_index = 0;
 
 				printf("Running inference\r\n");
