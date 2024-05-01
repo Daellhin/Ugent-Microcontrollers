@@ -192,8 +192,7 @@ int main(void) {
 
 	int number1 = 0; // first number or answer
 	int number2 = 0;
-	int addOrSubtract = 0; // 0=add, 1=subtract
-	int calculationSet = 0;
+	int calculation = 0; // 0=unset, 1=add, 2=subtract
 	int calculated = 0;
 	/* USER CODE END 2 */
 
@@ -208,15 +207,14 @@ int main(void) {
 		// -- Wait for IR code --
 		while (infrared_state < 5) {
 		}
-		sprintf(text, "Received code 0x%x: ", infrared_code);
+		sprintf(text, "Received code 0x%lx: ", infrared_code);
 		HAL_UART_Transmit(&huart1, (uint8_t*) text, strlen(text), 100);
 
 		// -- Check received code --
 		if (infrared_code == clear_code) {
 			number1 = 0;
 			number2 = 0;
-			addOrSubtract = 0;
-			calculationSet = 0;
+			calculation = 0;
 			calculated = 0;
 			I2CwriteDECnumber(number1);
 			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, 0);
@@ -226,13 +224,14 @@ int main(void) {
 			HAL_UART_Transmit(&huart1, (uint8_t*) text, strlen(text), 100);
 			continue;
 		}
-		if (infrared_code == play_code) {
-			if (addOrSubtract == 0) {
+		if (infrared_code == play_code && calculation != 0) {
+			if (calculation == 1) {
 				number1 = number1 + number2;
-			} else {
+			} else if (calculation == 2) {
 				number1 = number1 - number2;
 			}
 			number2 = 0;
+			calculation = 0;
 			calculated = 1;
 			I2CwriteDECnumber(number1);
 			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, 0);
@@ -243,8 +242,7 @@ int main(void) {
 			continue;
 		}
 		if (infrared_code == add_code) {
-			addOrSubtract = 0;
-			calculationSet = 1;
+			calculation = 1;
 			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, 1);
 			HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, 0);
 
@@ -253,8 +251,7 @@ int main(void) {
 			continue;
 		}
 		if (infrared_code == subtract_code) {
-			addOrSubtract = 1;
-			calculationSet = 1;
+			calculation = 2;
 			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, 0);
 			HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, 1);
 
@@ -264,7 +261,7 @@ int main(void) {
 		}
 		for (int n = 0; n <= 9; n++) {
 			if (infrared_code == white_number_codes[n]) {
-				if (calculationSet == 0) {
+				if (calculation == 0) {
 					// If answer is stil shown, but no calculation has been set, reset answer
 					if (calculated) {
 						number1 = 0;
