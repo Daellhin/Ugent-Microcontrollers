@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    sine_model.h
   * @author  AST Embedded Analytics Research Platform
-  * @date    Tue Apr 30 18:14:56 2024
+  * @date    Fri May  3 21:34:55 2024
   * @brief   AI Tool Automatic Code Generator for Embedded NN computing
   ******************************************************************************
   * @attention
@@ -27,7 +27,7 @@
 
 /******************************************************************************/
 #define AI_SINE_MODEL_MODEL_NAME          "sine_model"
-#define AI_SINE_MODEL_ORIGIN_MODEL_NAME   "sine_model_5"
+#define AI_SINE_MODEL_ORIGIN_MODEL_NAME   "sine_model_5_int8"
 
 /******************************************************************************/
 #define AI_SINE_MODEL_ACTIVATIONS_ALIGNMENT   (4)
@@ -37,7 +37,7 @@
 /******************************************************************************/
 #define AI_SINE_MODEL_IN_NUM        (1)
 #define AI_SINE_MODEL_IN { \
-  AI_BUFFER_OBJ_INIT(AI_BUFFER_FORMAT_FLOAT, 1, 1, 1, 1, NULL), \
+  AI_BUFFER_OBJ_INIT(AI_BUFFER_FORMAT_U8, 1, 1, 1, 1, NULL), \
 }
 #define AI_SINE_MODEL_IN_SIZE { \
   AI_SINE_MODEL_IN_1_SIZE, \
@@ -49,12 +49,12 @@
 #define AI_SINE_MODEL_IN_1_WIDTH       (1)
 #define AI_SINE_MODEL_IN_1_CHANNEL     (1)
 #define AI_SINE_MODEL_IN_1_SIZE        (1 * 1 * 1)
-#define AI_SINE_MODEL_IN_1_SIZE_BYTES  (AI_SINE_MODEL_IN_1_SIZE * 4)
+#define AI_SINE_MODEL_IN_1_SIZE_BYTES  (AI_SINE_MODEL_IN_1_SIZE * 1)
 
 /******************************************************************************/
 #define AI_SINE_MODEL_OUT_NUM       (1)
 #define AI_SINE_MODEL_OUT { \
-  AI_BUFFER_OBJ_INIT(AI_BUFFER_FORMAT_FLOAT, 1, 1, 1, 1, NULL), \
+  AI_BUFFER_OBJ_INIT(AI_BUFFER_FORMAT_U8, 1, 1, 1, 1, NULL), \
 }
 #define AI_SINE_MODEL_OUT_SIZE { \
   AI_SINE_MODEL_OUT_1_SIZE, \
@@ -66,10 +66,10 @@
 #define AI_SINE_MODEL_OUT_1_WIDTH       (1)
 #define AI_SINE_MODEL_OUT_1_CHANNEL     (1)
 #define AI_SINE_MODEL_OUT_1_SIZE        (1 * 1 * 1)
-#define AI_SINE_MODEL_OUT_1_SIZE_BYTES  (AI_SINE_MODEL_OUT_1_SIZE * 4)
+#define AI_SINE_MODEL_OUT_1_SIZE_BYTES  (AI_SINE_MODEL_OUT_1_SIZE * 1)
 
 /******************************************************************************/
-#define AI_SINE_MODEL_N_NODES (11)
+#define AI_SINE_MODEL_N_NODES (8)
 
 
 AI_API_DECLARE_BEGIN
