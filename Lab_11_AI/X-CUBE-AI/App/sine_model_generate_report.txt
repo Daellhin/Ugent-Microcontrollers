@@ -1,6 +1,6 @@
 Neural Network Tools for STM32AI v1.4.1 (STM.ai v6.0.0-RC6)
-Created date       : 2024-05-03 21:34:55
-Parameters         : generate --name sine_model -m C:/Users/lorin/OneDrive/Documents/UGentJ2/Microcontrollers/Labos/Labo 11 TrainML/sine_model_5_int8.tflite --type tflite --compression 1 --verbosity 1 --workspace C:\Users\lorin\AppData\Local\Temp\mxAI_workspace1216450873440011599987340369028765 --output C:\Users\lorin\.stm32cubemx
+Created date       : 2024-05-21 11:03:14
+Parameters         : generate --name sine_model -m C:/Users/lorin/OneDrive/Documents/UGentJ2/Microcontrollers/Labos/Labo 11 TrainML/sine_model_5_int8.tflite --type tflite --compression 1 --verbosity 1 --workspace C:\Users\lorin\AppData\Local\Temp\mxAI_workspace828697649434006373210769702718282 --output C:\Users\lorin\.stm32cubemx
 
 Exec/report summary (generate)
 ------------------------------------------------------------------------------------------------------------------------
@@ -9,7 +9,7 @@ type               : tflite
 c_name             : sine_model
 compression        : None
 quantize           : None
-workspace dir      : C:\Users\lorin\AppData\Local\Temp\mxAI_workspace1216450873440011599987340369028765
+workspace dir      : C:\Users\lorin\AppData\Local\Temp\mxAI_workspace828697649434006373210769702718282
 output dir         : C:\Users\lorin\.stm32cubemx
 
 model_name         : sine_model_5_int8

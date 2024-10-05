@@ -842,7 +842,7 @@
     "c_nodes_n": 8,
     "c_tensors_n": 21,
     "data_alignment": 4,
-    "date_time": "Fri May  3 21:34:55 2024",
+    "date_time": "Tue May 21 11:03:13 2024",
     "inputs": [
         "serving_default_dense_21_input0_output"
     ],

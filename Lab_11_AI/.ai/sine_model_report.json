@@ -1,7 +1,7 @@
 {
     "_allocate_inputs": 0,
     "_allocate_outputs": 0,
-    "cli_parameters": "generate --name sine_model -m C:/Users/lorin/OneDrive/Documents/UGentJ2/Microcontrollers/Labos/Labo 11 TrainML/sine_model_5_int8.tflite --type tflite --compression 1 --verbosity 1 --workspace C:\\Users\\lorin\\AppData\\Local\\Temp\\mxAI_workspace1216450873440011599987340369028765 --output C:\\Users\\lorin\\.stm32cubemx",
+    "cli_parameters": "generate --name sine_model -m C:/Users/lorin/OneDrive/Documents/UGentJ2/Microcontrollers/Labos/Labo 11 TrainML/sine_model_5_int8.tflite --type tflite --compression 1 --verbosity 1 --workspace C:\\Users\\lorin\\AppData\\Local\\Temp\\mxAI_workspace828697649434006373210769702718282 --output C:\\Users\\lorin\\.stm32cubemx",
     "cli_version": {
         "major": 1,
         "micro": 1,
@@ -12,7 +12,7 @@
         "factor": null,
         "layers": {}
     },
-    "date_time": "Fri May  3 21:34:55 2024",
+    "date_time": "Tue May 21 11:03:13 2024",
     "error": 0,
     "error_str": [],
     "exec_cmd": "generate",

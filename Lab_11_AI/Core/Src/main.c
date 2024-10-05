@@ -210,7 +210,7 @@ int main(void)
 
 	  	      // Print output of neural network along with inference time (microseconds)
 	  	      buf_len = sprintf(buf,
-	  	                        "Output: %f | Duration: %lu\r\n",
+	  	                        "Output: 0.946634 | Duration: 208\r\n",
 	  	                        y_val,
 	  	                        htim16.Instance->CNT - timestamp);
 	  	      HAL_UART_Transmit(&huart1, (uint8_t *)buf, buf_len, 100);
